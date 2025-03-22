@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*CSS Variables*/
+:root{
+    --primary-font: "Raleway", sans-serif;
+    --secondary-font: "Archivo Black", sans-serif;
+}
+
+/* Global styles */
+
+body {
+    font-family: var(--primary-font);
+    
+
+}
+h1, h2, h3{
+    font-family: var(--secondary-font);
+}
+#home .col-lg-5 img {
+    margin-top: 50px; /* Flyttar ner bilden */
+}
+
+
+
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Lägger till för att centrera innehållet horisontellt */
+    max-width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto; /* Centrerar sektionen horisontellt */
+}
+
+.aboutme img {
+    width: 200px;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Lägger till lite avstånd under bilden */
+}
+
+
+footer a {
+    text-decoration: none; /* Tar bort understrykning */
+    color: black; /* Ändrar färgen från blå till svart */
+    padding: 0 20px; /* Ger lite mellanrum mellan länkarna */
+    
+}
+
+footer a:hover {
+    color: #58a0ee; /* Valfri hover-effekt (Bootstrap-blå) */
+}
+@media screen and (min-width:768) {
+    .aboutme {
+        flex-direction: row; /* Gör att innehållet placeras i rad istället för kolumn */
+        text-align: left; /* Justerar texten till vänster */
+    }
+
+    .aboutme img {
+        margin-bottom: 0; /* Tar bort margin-bottom när texten är till höger om bilden */
+        margin-right: 20px; /* Lägger till lite avstånd mellan bild och text */
+    }
+}
