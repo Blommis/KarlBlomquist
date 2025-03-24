@@ -23,23 +23,95 @@ h1, h2, h3{
 
 
 
-.aboutme {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Lägger till för att centrera innehållet horisontellt */
-    max-width: 600px;
-    justify-content: center;
+/* Grundinställning för mobilen (bild över text) */
+#about{
     text-align: center;
-    margin: 0 auto; /* Centrerar sektionen horisontellt */
+}
+.about-container {
+    display: flex;
+    flex-direction: column; /* Kolumnlayout för mobiler */
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.aboutme img {
+/* Bildstil */
+.aboutmeimage img {
     width: 200px;
     height: 300px;
-    border: 0;
     border-radius: 10px;
-    margin-bottom: 20px; /* Lägger till lite avstånd under bilden */
+    margin-bottom: 20px; /* Avstånd mellan bild och text på mobil */
 }
+
+/* Textstil */
+.aboutme {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Flexbox setup for card body */
+.card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Reduced padding */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.card-title {
+    font-size: 1rem; /* Smaller font size */
+    font-weight: bold;
+    margin-top: 5px; /* Reduced margin */
+}
+
+.card i {
+    color: #007bff; /* Icon color */
+}
+
+.card-body i {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Hover effect on card */
+.card {
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
+    z-index: 1;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    transform: translateY(-4px); /* Slight lift */
+}
+
+/* Hide card description initially */
+.card-text {
+    display: none;
+}
+
+/* Show description on hover */
+.card:hover .card-text {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 8px; /* Further reduced padding */
+    }
+    .card-title {
+        font-size: 0.9rem; /* Smaller title font */
+    }
+}
+
+
+
+
+
 
 
 footer a {
@@ -52,14 +124,30 @@ footer a {
 footer a:hover {
     color: #58a0ee; /* Valfri hover-effekt (Bootstrap-blå) */
 }
-@media screen and (min-width:768) {
-    .aboutme {
-        flex-direction: row; /* Gör att innehållet placeras i rad istället för kolumn */
-        text-align: left; /* Justerar texten till vänster */
+
+/* Media Query för dator (min-width 768px) */
+@media (min-width: 768px) {
+    #about h1{
+        padding-bottom: 20px;
+    }
+    .about-container {
+        flex-direction: row; /* Placera bild och text bredvid varandra */
+        align-items: center;
+        text-align: left; /* Vänsterjustera text */
+        max-width: 800px; /* Anpassa maxbredd */
+        margin: 0 auto;
     }
 
-    .aboutme img {
-        margin-bottom: 0; /* Tar bort margin-bottom när texten är till höger om bilden */
-        margin-right: 20px; /* Lägger till lite avstånd mellan bild och text */
+    .aboutmeimage {
+        margin-right: 80px; /* Lägg till mellanrum mellan bild och text */
+    }
+    .aboutmeimage img {
+        width: 300px;
+        height: 400px;
+    }
+    .aboutme {
+        text-align: left; /* Säkerställ att texten justeras åt vänster */
+        max-width: 500px;
+       
     }
 }
