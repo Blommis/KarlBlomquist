@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     let jobTitles = ["Digital Marketing graduate", "Web Developer student", "Front End Developer student", "Back end student"];
     let index = 0;

@@ -21,11 +21,16 @@ h1, h2, h3{
 }
 
 
+#navbar {
+    font-family: 'Archivo Black', sans-serif;
+}
+
 
 
 /* Grundinställning för mobilen (bild över text) */
 #about{
     text-align: center;
+    
 }
 .about-container {
     display: flex;
@@ -50,63 +55,27 @@ h1, h2, h3{
     text-align: center;
 }
 
-/* Flexbox setup for card body */
-.card-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px; /* Reduced padding */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+/* courses */
+
+/* Styling for square cards */
+
+
+/* Ikoner och text inom kortet */
+.card i {
+    font-size: 1.8rem; /* Anpassad ikonstorlek */
+    margin-bottom: 6px;
+    color: #007bff;
 }
 
 .card-title {
-    font-size: 1rem; /* Smaller font size */
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 5px; /* Reduced margin */
+    margin-bottom: 4px;
 }
 
-.card i {
-    color: #007bff; /* Icon color */
-}
 
-.card-body i {
-    margin-bottom: 10px; /* Reduced margin */
-}
 
-/* Hover effect on card */
-.card {
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
-    z-index: 1;
-}
 
-.card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
-    transform: translateY(-4px); /* Slight lift */
-}
-
-/* Hide card description initially */
-.card-text {
-    display: none;
-}
-
-/* Show description on hover */
-.card:hover .card-text {
-    display: block;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .card-body {
-        padding: 8px; /* Further reduced padding */
-    }
-    .card-title {
-        font-size: 0.9rem; /* Smaller title font */
-    }
-}
 
 
 
@@ -127,8 +96,12 @@ footer a:hover {
 
 /* Media Query för dator (min-width 768px) */
 @media (min-width: 768px) {
+    #about{
+        padding-top: 60px;
+    }
     #about h1{
         padding-bottom: 20px;
+        font-size: 3rem;
     }
     .about-container {
         flex-direction: row; /* Placera bild och text bredvid varandra */
