@@ -16,6 +16,9 @@ body {
 h1, h2, h3{
     font-family: var(--secondary-font);
 }
+#home{
+    background:linear-gradient(135deg, #10eca3, #038ffb77);
+}
 #home .col-lg-5 img {
     margin-top: 50px; /* Flyttar ner bilden */
 }
@@ -23,39 +26,90 @@ h1, h2, h3{
 
 #navbar {
     font-family: 'Archivo Black', sans-serif;
+    background-color: azure;
+    border: none;
 }
 
 
 
 /* Grundinställning för mobilen (bild över text) */
-#about{
+/* About Section Base Styles */
+#about {
+    
     text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
     
 }
+
+#about.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .about-container {
     display: flex;
-    flex-direction: column; /* Kolumnlayout för mobiler */
+    flex-direction: column;
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
 
-/* Bildstil */
+/* Image Style */
 .aboutmeimage img {
     width: 200px;
     height: 300px;
     border-radius: 10px;
-    margin-bottom: 20px; /* Avstånd mellan bild och text på mobil */
+    margin-bottom: 20px;
 }
 
-/* Textstil */
+/* Text Style */
 .aboutme {
-    max-width: 600px;
+    max-width: 400px;
     text-align: center;
 }
 
-/* courses */
+/* Buttons Style */
+.info-buttons button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-family: var(--primary-font);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.info-buttons button:hover {
+    background-color: #064a78;
+}
+
+#additional-info {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex; /* Enables flexbox for alignment */
+    flex-direction: column; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Aligns items to the center */
+    text-align: center; /* Ensures text is centered */
+    width: 100%; /* Makes sure it spans the container */
+}
+
+#additional-info p {
+    max-width: 80%; /* Limits the width for better readability */
+    margin: 10px auto; /* Centers the paragraph within its container */
+    text-align: center; /* Centers the text within the paragraph */
+}
+
+#additional-info.visible {
+    opacity: 1;
+}
+
 
 /* Styling for square cards */
 
@@ -72,16 +126,6 @@ h1, h2, h3{
     font-weight: bold;
     margin-bottom: 4px;
 }
-
-
-
-
-
-
-
-
-
-
 
 footer a {
     text-decoration: none; /* Tar bort understrykning */
@@ -122,5 +166,10 @@ footer a:hover {
         text-align: left; /* Säkerställ att texten justeras åt vänster */
         max-width: 500px;
        
+    }
+    #additional-info p {
+        max-width: 80%; /* Limits the width for better readability */
+        text-align: left; /* Centers the text within the paragraph */
+        margin-right: 80px;
     }
 }
