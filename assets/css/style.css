@@ -35,7 +35,6 @@ h1, h2, h3{
 /* Grundinställning för mobilen (bild över text) */
 /* About Section Base Styles */
 #about {
-    
     text-align: center;
     opacity: 0;
     transform: translateY(50px);
@@ -70,22 +69,38 @@ h1, h2, h3{
     max-width: 400px;
     text-align: center;
 }
-
-/* Buttons Style */
+.inline-list {
+    list-style: none; /* Removes the bullet points */
+    justify-content: start;
+}
+/* Base Style for Buttons */
+.info-buttons{
+    background:linear-gradient(135deg, #10eca3, #038ffb77);
+    border-radius: 10px;
+}
 .info-buttons button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background: none; /* Removes background color */
+    border: none; /* Removes the border */
+    color: black; /* Primary button color */
+    text-decoration: none; /* No underline by default */
     padding: 8px 16px;
     font-size: 1rem;
     font-family: var(--primary-font);
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
+/* Hover state */
 .info-buttons button:hover {
-    background-color: #064a78;
+    color: #064a78; /* Darker blue */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Active state (clicked button) */
+.info-buttons button.active {
+    color: #064a78; /* Darker blue for active */
+    text-decoration: underline; /* Permanent underline */
+    font-weight: bold; /* Optional: Highlight active button further */
 }
 
 #additional-info {
@@ -110,22 +125,77 @@ h1, h2, h3{
     opacity: 1;
 }
 
+/* Slimmer Card Styling */
 
-/* Styling for square cards */
+/* Styling for the Header */
+#experiences h1 {
+    color: black; /* New header color (dark gray-blue) */
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px; /* Spacing below the header */
+    padding-bottom: 10px;
+}
 
+/* Space Above the Section */
+#experiences {
+    padding-top: 500px; /* Add more space above the section */
+    margin-top: 40px; /* Additional margin from the previous element */
+    background-color: azure;
+}
+.card.small-card {
+    border: none;
+    background:linear-gradient(135deg, #10eca3, #038ffb77);
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Keeps content within bounds */
+    transition: transform 0.3s ease-in-out;
+    height: 130px; /* Slimmer height */
+    padding: 10px; /* Reduced padding */
+    
+}
 
-/* Ikoner och text inom kortet */
+/* Hover Effect */
+.card.small-card:hover {
+    transform: scale(1.02); /* Slight enlargement */
+    cursor: pointer;
+}
+
+/* Hidden Text */
+.card .hover-text {
+    display: none; /* Hidden by default */
+    font-size: 0.75rem; /* Smaller text */
+    color: black; /* Muted color */
+    margin-top: 8px;
+}
+
+/* Show hidden text on hover */
+.card.small-card:hover .hover-text {
+    display: block;
+}
+
+/* Icons */
 .card i {
-    font-size: 1.8rem; /* Anpassad ikonstorlek */
-    margin-bottom: 6px;
-    color: #007bff;
+    color: black; /* Primary blue icon */
 }
 
-.card-title {
-    font-size: 1.2rem;
+/* Titles */
+.card h6 {
+    font-size: 0.9rem; /* Smaller titles */
     font-weight: bold;
-    margin-bottom: 4px;
 }
+
+.row.g-3 {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically (if needed) */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 15px; /* Space between cards */
+    margin: 0 auto; /* Centers the row itself if necessary */
+}
+
+
+
 
 footer a {
     text-decoration: none; /* Tar bort understrykning */
@@ -140,13 +210,23 @@ footer a:hover {
 
 /* Media Query för dator (min-width 768px) */
 @media (min-width: 768px) {
+    .navbar-brand{
+        margin-left: 80px;
+    }
+    .navbar-nav{
+        margin-right: 80px;
+    }
     #about{
         padding-top: 60px;
     }
     #about h1{
-        padding-bottom: 20px;
+       padding-bottom: 50px;
         font-size: 3rem;
     }
+    #about h2{
+        
+        width: 600px;
+     }
     .about-container {
         flex-direction: row; /* Placera bild och text bredvid varandra */
         align-items: center;
@@ -159,17 +239,30 @@ footer a:hover {
         margin-right: 80px; /* Lägg till mellanrum mellan bild och text */
     }
     .aboutmeimage img {
-        width: 300px;
-        height: 400px;
+        width: 320px;
+        height: 500px;
     }
     .aboutme {
         text-align: left; /* Säkerställ att texten justeras åt vänster */
         max-width: 500px;
-       
+        padding-bottom: 50px;
+         
+         
     }
     #additional-info p {
         max-width: 80%; /* Limits the width for better readability */
         text-align: left; /* Centers the text within the paragraph */
         margin-right: 80px;
+    }
+    #experiences h1 {
+        color: black; /* New header color (dark gray-blue) */
+        font-size: 2.5rem; /* Adjust size as needed */
+        font-weight: bold; /* Make the text bold */
+        padding-top: 20px; /* Spacing below the header */
+        padding-bottom: 50px;
+    }
+    #experiences {
+       padding-bottom: 50px;
+        padding-top: 140px;
     }
 }

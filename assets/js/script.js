@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    let jobTitles = ["Digital Marketing graduate", "Web Developer student", "Front End Developer student", "Back end student"];
+    let jobTitles = ["Bachelor in Marketing", "Web Developer student", "FrontEnd student", "BackEnd student"];
     let index = 0;
     let output = document.querySelector(".typed-text-output");
 
@@ -26,6 +26,7 @@ document.addEventListener("scroll", () => {
 });
 
 
+// in about section at education and experience you click - you get active link meanwhile gets info
 document.addEventListener("DOMContentLoaded", () => {
     const educationBtn = document.getElementById("education-btn");
     const experienceBtn = document.getElementById("experience-btn");
@@ -33,26 +34,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Education Info
     const educationContent = `
-        
-        <p> <strong> 2023 - 2025 </strong>  | Bachelor's Degree in Digital Marketing from Sälj & Marknadshögskolan Stockholm.</p>
-        <p> <strong> Jan - July 2025 </strong> | Currently pursuing a Fullstack Developer Certificate at Code Institute Dublin (On distance).</p>
+        <p><strong>2023 - 2025</strong> | Bachelor's Degree in Digital Marketing from Sälj & Marknadshögskolan Stockholm.</p>
+        <p><strong>Jan - July 2025</strong> | Currently pursuing a Fullstack Developer Certificate at Code Institute Dublin (On distance).</p>
     `;
 
     // Experience Info
     const experienceContent = `
-        
-        <p><strong>Autumn 2023</strong> | Internship in copenhagen at marketing agency focus on Influencer marketing.</p>
-        <p><strong>Autumn 2024</strong> | Internship back in Sweden working with a marketing team Inhouse at a recruitment company.</p>
+        <p><strong>Autumn 2023</strong> | Internship in Copenhagen at marketing agency focused on Influencer marketing.</p>
+        <p><strong>Autumn 2024</strong> | Internship back in Sweden working with a marketing team in-house at a recruitment company.</p>
     `;
 
-    // Event Listeners for Buttons
+    // Function to handle active state
+    const setActiveButton = (activeButton) => {
+        // Remove active class from both buttons
+        educationBtn.classList.remove("active");
+        experienceBtn.classList.remove("active");
+
+        // Add active class to the clicked button
+        activeButton.classList.add("active");
+    };
+
+    // Event Listener for Education Button
     educationBtn.addEventListener("click", () => {
         additionalInfo.innerHTML = educationContent;
         additionalInfo.classList.add("visible");
+        setActiveButton(educationBtn); // Set active state
     });
 
+    // Event Listener for Experience Button
     experienceBtn.addEventListener("click", () => {
         additionalInfo.innerHTML = experienceContent;
         additionalInfo.classList.add("visible");
+        setActiveButton(experienceBtn); // Set active state
     });
 });
+
