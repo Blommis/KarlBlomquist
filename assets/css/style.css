@@ -16,9 +16,11 @@ body {
 h1, h2, h3{
     font-family: var(--secondary-font);
 }
-#home{
+#home {
     background:linear-gradient(135deg, #10eca3, #038ffb77);
+    
 }
+
 #home .col-lg-5 img {
     margin-top: 50px; /* Flyttar ner bilden */
 }
@@ -31,6 +33,13 @@ h1, h2, h3{
 }
 
 
+.typed-text-output {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds "..." when text is too long */
+    width: 100%; /* Ensure proper width handling */
+    font-size: 1.2rem;
+}
 
 /* Grundinställning för mobilen (bild över text) */
 /* About Section Base Styles */
@@ -216,9 +225,10 @@ footer a:hover {
     .navbar-nav{
         margin-right: 80px;
     }
-    #about{
-        padding-top: 60px;
+    .typed-text-output {
+        font-size: 3rem;
     }
+    
     #about h1{
        padding-bottom: 50px;
         font-size: 3rem;
@@ -227,6 +237,7 @@ footer a:hover {
         
         width: 600px;
      }
+    
     .about-container {
         flex-direction: row; /* Placera bild och text bredvid varandra */
         align-items: center;
@@ -264,5 +275,12 @@ footer a:hover {
     #experiences {
        padding-bottom: 50px;
         padding-top: 140px;
+    }
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+    .typed-text-output {
+        font-size: 1.8rem;
     }
 }
