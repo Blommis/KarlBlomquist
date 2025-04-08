@@ -44,6 +44,7 @@ h1, h2, h3{
 /* Grundinställning för mobilen (bild över text) */
 /* About Section Base Styles */
 #about {
+    background-color: #f8f9fa;
     text-align: center;
     opacity: 0;
     transform: translateY(50px);
@@ -85,8 +86,16 @@ h1, h2, h3{
 /* Base Style for Buttons */
 .info-buttons{
     background:linear-gradient(135deg, #10eca3, #038ffb77);
-    border-radius: 10px;
+    border-radius: 5px;
+    
 }
+.aboutme .info-buttons h2 {
+    margin-left: 50px;
+    text-align: left;
+}
+
+
+
 .info-buttons button {
     background: none; /* Removes background color */
     border: none; /* Removes the border */
@@ -99,16 +108,14 @@ h1, h2, h3{
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
-/* Hover state */
 .info-buttons button:hover {
-    color: #064a78; /* Darker blue */
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
 }
-
+#education-btn, #experience-btn{
+    margin-left: 10px;
+}
 /* Active state (clicked button) */
 .info-buttons button.active {
-    color: #064a78; /* Darker blue for active */
-    text-decoration: underline; /* Permanent underline */
     font-weight: bold; /* Optional: Highlight active button further */
 }
 
@@ -134,75 +141,75 @@ h1, h2, h3{
     opacity: 1;
 }
 
-/* Slimmer Card Styling */
+/* What I learned so far section */
 
-/* Styling for the Header */
-#experiences h1 {
-    color: black; /* New header color (dark gray-blue) */
-    font-size: 1.5rem; /* Adjust size as needed */
-    font-weight: bold; /* Make the text bold */
-    margin-bottom: 20px; /* Spacing below the header */
-    padding-bottom: 10px;
+/* Section Styling */
+#courses {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
 }
 
-/* Space Above the Section */
-#experiences {
-    padding-top: 500px; /* Add more space above the section */
-    margin-top: 40px; /* Additional margin from the previous element */
-    background-color: azure;
+#courses h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
 }
-.card.small-card {
-    border: none;
-    background:linear-gradient(135deg, #10eca3, #038ffb77);
-    color: black;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden; /* Keeps content within bounds */
-    transition: transform 0.3s ease-in-out;
-    height: 130px; /* Slimmer height */
-    padding: 10px; /* Reduced padding */
+
+/* Courses Grid */
+.courses-grid {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 110px); /* Ensures 3 courses per row */
+    gap: 25px; /* Adjust spacing between course cards */
+    margin: 0 auto; /* Centers the grid horizontally within the parent container */
+    justify-content: center; /* Ensures grid items are centered horizontally */
+    align-content: center; /* Aligns items vertically within the grid container */
+    height: fit-content; /* Adjust height for better alignment */
     
 }
 
-/* Hover Effect */
-.card.small-card:hover {
-    transform: scale(1.02); /* Slight enlargement */
-    cursor: pointer;
+/* Course Cards */
+.courses-grid .course-card {
+    background-color: #fff;
+    color: #333;
+    width: 120px; /* Fixed width for uniform sizing */
+    height: 55px; /* Fixed height for uniform sizing */
+    padding: 10px; /* Adjust padding for smaller cards */
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 24px 28px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden; /* Prevent text overflow */
 }
 
-/* Hidden Text */
-.card .hover-text {
-    display: none; /* Hidden by default */
-    font-size: 0.75rem; /* Smaller text */
-    color: black; /* Muted color */
-    margin-top: 8px;
+.courses-grid .course-card:hover {
+    box-shadow: 0 6px 15px #10eca3, 0 0 20px #038ffb77;
+    
 }
 
-/* Show hidden text on hover */
-.card.small-card:hover .hover-text {
-    display: block;
+.courses-grid .course-card h4 {
+    font-size: 0.9rem; /* Adjusted font size */
+    font-weight: 600;
+    color: black;
 }
 
-/* Icons */
-.card i {
-    color: black; /* Primary blue icon */
-}
-
-/* Titles */
-.card h6 {
-    font-size: 0.9rem; /* Smaller titles */
+/* Styling for the Header */
+#experiences h1 {
+    color: black;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-.row.g-3 {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically (if needed) */
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-    gap: 15px; /* Space between cards */
-    margin: 0 auto; /* Centers the row itself if necessary */
+/* Active Button */
+.info-buttons button.active {
+    
+    border: 50%;
+    color: white;
+    box-shadow: 0 0 10px #10eca3, 0 0 20px #038ffb77;
 }
-
 
 
 
@@ -234,8 +241,8 @@ footer a:hover {
         font-size: 3rem;
     }
     #about h2{
-        
-        width: 600px;
+        width: 400px;
+        font-size: 1.5rem;
      }
     
     .about-container {
@@ -250,14 +257,14 @@ footer a:hover {
         margin-right: 80px; /* Lägg till mellanrum mellan bild och text */
     }
     .aboutmeimage img {
-        width: 320px;
+        width: 300px;
         height: 500px;
     }
     .aboutme {
         text-align: left; /* Säkerställ att texten justeras åt vänster */
         max-width: 500px;
         padding-bottom: 50px;
-         
+         max-width: 400px;
          
     }
     #additional-info p {
@@ -276,11 +283,84 @@ footer a:hover {
        padding-bottom: 50px;
         padding-top: 140px;
     }
+    .courses-grid {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 180px); /* Ensures 3 courses per row */
+        gap: 10px; /* Adjust spacing between course cards */
+        margin: 0 auto; /* Centers the grid horizontally within the parent container */
+        justify-content: center; /* Ensures grid items are centered horizontally */
+        align-content: center; /* Aligns items vertically within the grid container */
+        height: fit-content; /* Adjust height for better alignment */
+       
+    }
+    .courses-grid .course-card {
+        width: 180px; /* Fixed width for uniform sizing */
+        height: 60px; /* Fixed height for uniform sizing */
+        gap: 30px; 
+    }
+    .courses-container .info-buttons{
+        max-width: 750px; /* Limit the maximum width on larger screens */
+        margin: 0 auto; /* Center the element horizontally */
+        
+    }
     
 }
-
+@media screen and (min-width: 500px) and (max-width: 768px){
+    .courses-grid .course-card {
+        width: 180px; /* Fixed width for uniform sizing */
+        height: 65px; /* Fixed height for uniform sizing */
+        
+    }
+}
 @media screen and (min-width: 400px) and (max-width: 768px) {
     .typed-text-output {
         font-size: 1.8rem;
     }
+ 
+}
+@media screen and (min-width: 400px) and (max-width: 768px) {
+    .courses-grid {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 120px); /* Ensures 3 courses per row */
+        gap: 10px; /* Adjust spacing between course cards */
+        margin: 0 auto; /* Centers the grid horizontally within the parent container */
+        justify-content: center; /* Ensures grid items are centered horizontally */
+        align-content: center; /* Aligns items vertically within the grid container */
+        height: fit-content; /* Adjust height for better alignment */
+        
+    }
+    @media screen and (min-width: 400px) {
+        .courses-grid .course-card {
+            background-color: #fff;
+            color: #333;
+            width: 120px; /* Fixed width for uniform sizing */
+            height: 55px; /* Fixed height for uniform sizing */
+            padding: 10px; /* Adjust padding for smaller cards */
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 24px 28px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden; /* Prevent text overflow */
+        }
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width:400px){
+    .courses-grid .course-card {
+        background-color: #fff;
+        color: #333;
+        width: 130px; /* Fixed width for uniform sizing */
+        gap: 10px;
+        height: 65px; /* Fixed height for uniform sizing */
+        padding: 10px; /* Adjust padding for smaller cards */
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 24px 28px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        overflow: hidden; /* Prevent text overflow */
+    }
+    
 }

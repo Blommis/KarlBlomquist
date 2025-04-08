@@ -69,3 +69,70 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// What I learned so far section
+document.addEventListener("DOMContentLoaded", function () {
+    const digitalMarketingBtn = document.getElementById("digital-marketing-btn");
+    const webDeveloperBtn = document.getElementById("web-developer-btn");
+    const coursesInfo = document.getElementById("courses-info");
+
+    // Digital Marketing Courses
+    const digitalMarketingCourses = [
+        "Agile Project Management",
+        "Presentation Techniques",
+        "Digital Channels",
+        "SEM & Web Analytics",
+        "SEO",
+        "Social Media Marketing",
+        "Content Marketing",
+        "Economics & Law",
+        "Interaction Design",
+        "Data-Driven Sales",
+        "Digital Analytics",
+        "Erasmus LIA 1 & 2",
+    ];
+
+    // Web Developer Courses
+    const webDeveloperCourses = [
+        "HTML & CSS",
+        "JavaScript Basics",
+        "Responsive Design",
+        "React.js",
+        "Node.js",
+        "Database Management",
+    ];
+
+    // Function to render course cards
+    const renderCourses = (courses) => {
+        coursesInfo.innerHTML = ""; // Clear the grid
+        courses.forEach((course) => {
+            const courseCard = `
+                <div class="course-card">
+                    <h4>${course}</h4>
+                </div>
+            `;
+            coursesInfo.innerHTML += courseCard;
+        });
+    };
+
+    // Set Active Button
+    const setActiveButton = (activeButton) => {
+        digitalMarketingBtn.classList.remove("active");
+        webDeveloperBtn.classList.remove("active");
+        activeButton.classList.add("active");
+    };
+
+    // Event Listener for Digital Marketing Button
+    digitalMarketingBtn.addEventListener("click", () => {
+        renderCourses(digitalMarketingCourses); // Show courses
+        setActiveButton(digitalMarketingBtn); // Highlight button
+    });
+
+    // Event Listener for Web Developer Button
+    webDeveloperBtn.addEventListener("click", () => {
+        renderCourses(webDeveloperCourses); // Show courses
+        setActiveButton(webDeveloperBtn); // Highlight button
+    });
+
+    // No courses are loaded by default
+    coursesInfo.innerHTML = ""; // Ensure the grid is empty initially
+});
