@@ -28,9 +28,10 @@ h1, h2, h3{
 
 #navbar {
     font-family: 'Archivo Black', sans-serif;
-    background-color: azure;
+    background: transparent;
     border: none;
 }
+
 
 
 .typed-text-output {
@@ -50,6 +51,32 @@ h1, h2, h3{
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
     
+}
+.fun-facts {
+    background: linear-gradient(135deg, #10eca3, #038ffb77); /* Light gradient background */
+    padding: 20px; /* Adds space around the section */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the section */
+    text-align: left; /* Aligns text to the left */
+}
+
+.fun-facts h3 {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem; /* Adjust header size */
+    margin-bottom: 10px; /* Space below the header */
+    color: #333; /* Dark text color */
+}
+
+.fun-facts ul {
+    list-style-type: none; /* Bulleted list */
+    padding-left: 10px; /* Indentation for bullets */
+    color: #333; /* Dark text color */
+}
+
+.fun-facts li {
+    margin-bottom: 10px; /* Space between each list item */
+    font-family: var(--primary-font);
+    font-size: 1rem; /* List item font size */
 }
 
 #about.show {
@@ -76,7 +103,7 @@ h1, h2, h3{
 
 /* Text Style */
 .aboutme {
-    max-width: 400px;
+    max-width: 300px;
     text-align: center;
 }
 .inline-list {
@@ -106,6 +133,7 @@ h1, h2, h3{
     font-family: var(--primary-font);
     cursor: pointer;
     transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+    
 }
 
 .info-buttons button:hover {
@@ -205,14 +233,40 @@ h1, h2, h3{
 
 /* Active Button */
 .info-buttons button.active {
-    
     border: 50%;
     color: white;
     box-shadow: 0 0 10px #10eca3, 0 0 20px #038ffb77;
 }
 
+#project-carousel{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    margin-left: 20px;
+    
+}
+.carousel-cards{
+    gap: 60px;
+}
+.project-cards{
+    background:linear-gradient(135deg, #10eca3, #038ffb77);
+    padding: 10px 20px;
+    border: 0 10px;
+    border-radius: 10px;
+}
+.project-cards img{
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
 
+.project-button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
 
+}
 footer a {
     text-decoration: none; /* Tar bort understrykning */
     color: black; /* Ändrar färgen från blå till svart */
@@ -226,6 +280,7 @@ footer a:hover {
 
 /* Media Query för dator (min-width 768px) */
 @media (min-width: 768px) {
+   
     .navbar-brand{
         margin-left: 80px;
     }
@@ -241,7 +296,7 @@ footer a:hover {
         font-size: 3rem;
     }
     #about h2{
-        width: 400px;
+        width: 600px;
         font-size: 1.5rem;
      }
     
@@ -251,38 +306,31 @@ footer a:hover {
         text-align: left; /* Vänsterjustera text */
         max-width: 800px; /* Anpassa maxbredd */
         margin: 0 auto;
+        
     }
 
     .aboutmeimage {
-        margin-right: 80px; /* Lägg till mellanrum mellan bild och text */
+        margin-right: 60px; /* Lägg till mellanrum mellan bild och text */
     }
     .aboutmeimage img {
-        width: 300px;
-        height: 500px;
+        width: 270px;
+        height: 450px;
     }
     .aboutme {
         text-align: left; /* Säkerställ att texten justeras åt vänster */
-        max-width: 500px;
         padding-bottom: 50px;
-         max-width: 400px;
+         min-width: 600px;
          
     }
+    
+    
     #additional-info p {
-        max-width: 80%; /* Limits the width for better readability */
+        min-width: 600px; /* Limits the width for better readability */
         text-align: left; /* Centers the text within the paragraph */
-        margin-right: 80px;
+        margin-right: 180px;
+        
     }
-    #experiences h1 {
-        color: black; /* New header color (dark gray-blue) */
-        font-size: 2.5rem; /* Adjust size as needed */
-        font-weight: bold; /* Make the text bold */
-        padding-top: 20px; /* Spacing below the header */
-        padding-bottom: 50px;
-    }
-    #experiences {
-       padding-bottom: 50px;
-        padding-top: 140px;
-    }
+   
     .courses-grid {
         padding-top: 20px;
         display: grid;
@@ -304,7 +352,39 @@ footer a:hover {
         margin: 0 auto; /* Center the element horizontally */
         
     }
+    #experience-btn p{
+        margin-left: 610px;
+    }
+    #project-carousel{
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        margin-left: 20px;
+        padding-top: 50px;
+        
+    }
+    .carousel-cards{
+        gap: 60px;
+    }
+    .project-cards{
+        background:linear-gradient(135deg, #10eca3, #038ffb77);
+        padding: 10px 20px;
+        border: 0 10px;
+        border-radius: 10px;
+    }
+    .project-cards img{
+        width: 400px;
+        height: 200px;
+        border-radius: 10px;
+    }
     
+    .project-button{
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        width: 150px;
+    
+    }
 }
 @media screen and (min-width: 500px) and (max-width: 768px){
     .courses-grid .course-card {
@@ -331,8 +411,8 @@ footer a:hover {
         height: fit-content; /* Adjust height for better alignment */
         
     }
-    @media screen and (min-width: 400px) {
-        .courses-grid .course-card {
+    
+     .courses-grid .course-card {
             background-color: #fff;
             color: #333;
             width: 120px; /* Fixed width for uniform sizing */
@@ -343,8 +423,14 @@ footer a:hover {
             box-shadow: 0 24px 28px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             overflow: hidden; /* Prevent text overflow */
-        }
     }
+    .aboutme {
+        max-width: 400px;
+        margin-left: 5px;
+        text-align: left;
+    }
+    
+    
 }
 
 
@@ -363,4 +449,24 @@ footer a:hover {
         overflow: hidden; /* Prevent text overflow */
     }
     
+}
+@media screen and (max-width: 350px){
+    .aboutme {
+        max-width: 230px;
+        margin-left: 10px;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 400px){
+    #project-carousel{
+       
+        max-width: 400px;
+        margin-left: 20px;
+    }
+}   .carousel-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
 }

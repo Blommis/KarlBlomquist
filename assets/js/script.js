@@ -40,8 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Experience Info
     const experienceContent = `
-        <p><strong>Autumn 2023</strong> | Internship in Copenhagen at marketing agency focused on Influencer marketing.</p>
-        <p><strong>Autumn 2024</strong> | Internship back in Sweden working with a marketing team in-house at a recruitment company.</p>
+        <p><strong>Autumn 2023</strong> | In autumn 2023, I took my first Erasmus internship abroad in Copenhagen, working at a marketing agency 
+        focused on influencer marketing. During this time, I gained valuable experience in international marketing and cultural differences.
+         My main task was to establish the Danish platform in the Swedish market, managing the process independently. This internship improved my 
+         adaptability, teamwork skills, and ability to communicate in multiple languages.
+          </p>
+
+        <p><strong>Autumn 2024</strong> | During my second internship at the marketing department of the recruitment company Procruitment, 
+        I have combined technical skills with creativity to produce content that strengthens the brand. I developed a career page and an intranet for
+         consultants, utilizing HTML, CSS, and JavaScript with a strong focus on user-friendliness.
+Additionally, I have worked on SEO, copywriting, and content marketing, as well as managing their social 
+media to effectively reach the target audience. By leveraging tools like Keyword Planner and Google Analytics, I have analyzed data to identify areas for improvement in Procruitment's marketing efforts and implemented strategies to optimize results.</p>
     `;
 
     // Function to handle active state
@@ -93,12 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Web Developer Courses
     const webDeveloperCourses = [
-        "HTML & CSS",
-        "JavaScript Basics",
-        "Responsive Design",
-        "React.js",
-        "Node.js",
-        "Database Management",
+        "HTML", "CSS", "Bootstrap","JavaScript", "Jest", 
+        "jQuery", "API", "Python (Soon)", "Django (Soon)", 
+        "React.js","Database Management", "Github", "Vs Code", "README"
     ];
 
     // Function to render course cards
@@ -136,3 +142,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // No courses are loaded by default
     coursesInfo.innerHTML = ""; // Ensure the grid is empty initially
 });
+
