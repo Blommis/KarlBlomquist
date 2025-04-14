@@ -31,6 +31,14 @@ h1, h2, h3{
     background: transparent;
     border: none;
 }
+.navbar-brand:hover{
+    color: white;
+}
+/* Hover effect - change color when the mouse hovers over a menu item */
+.nav-link:hover {
+    color: white;  /* Change to your preferred hover color */
+}
+
 
 
 
@@ -104,7 +112,8 @@ h1, h2, h3{
 /* Text Style */
 .aboutme {
     max-width: 300px;
-    text-align: center;
+    text-align: left;
+    margin-left: 20px;
 }
 .inline-list {
     list-style: none; /* Removes the bullet points */
@@ -160,9 +169,9 @@ h1, h2, h3{
 }
 
 #additional-info p {
-    max-width: 80%; /* Limits the width for better readability */
+    max-width: 100%; /* Limits the width for better readability */
     margin: 10px auto; /* Centers the paragraph within its container */
-    text-align: center; /* Centers the text within the paragraph */
+    text-align: left; /* Centers the text within the paragraph */
 }
 
 #additional-info.visible {
@@ -237,45 +246,78 @@ h1, h2, h3{
     color: white;
     box-shadow: 0 0 10px #10eca3, 0 0 20px #038ffb77;
 }
-
 #project-carousel{
+   margin-bottom: 50px;
+    margin-top: 20px;
+}
+#project-carousel h1{
+    text-align: center;
+ }
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .carousel-track {
     display: flex;
-    flex-direction: column;
-    max-width: 200px;
-    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
     
-}
-.carousel-cards{
-    gap: 60px;
-}
-.project-cards{
-    background:linear-gradient(135deg, #10eca3, #038ffb77);
-    padding: 10px 20px;
-    border: 0 10px;
+  }
+  
+  .project-cards {
+    flex: 0 0 100%; /* Endast ett kort per vy */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #10eca3, #038ffb77);
     border-radius: 10px;
-}
-.project-cards img{
-    width: 200px;
-    height: 150px;
+  }
+  
+  .project-cards img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-}
-
-.project-button{
+    filter: brightness(80%); /* 100% är original, 50% gör bilden mörkare */
+  }
+  .project-button{
     padding: 10px;
     border: none;
     border-radius: 10px;
     width: 150px;
-
 }
-footer a {
-    text-decoration: none; /* Tar bort understrykning */
-    color: black; /* Ändrar färgen från blå till svart */
-    padding: 0 20px; /* Ger lite mellanrum mellan länkarna */
-    
+.project-button:hover{
+    background-color: rgb(193, 193, 193);
 }
-
-footer a:hover {
-    color: #58a0ee; /* Valfri hover-effekt (Bootstrap-blå) */
+  /* Pilar */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+  }
+  
+  .carousel-btn.left {
+    left: 10px;
+  }
+  
+  .carousel-btn.right {
+    right: 10px;
+  }
+  
+  
+#contact{
+    text-align: center;
 }
 
 /* Media Query för dator (min-width 768px) */
@@ -291,6 +333,10 @@ footer a:hover {
         font-size: 3rem;
     }
     
+    .fun-facts {
+        padding: 10px;
+       
+    }
     #about h1{
        padding-bottom: 50px;
         font-size: 3rem;
@@ -305,19 +351,21 @@ footer a:hover {
         align-items: center;
         text-align: left; /* Vänsterjustera text */
         max-width: 800px; /* Anpassa maxbredd */
-        margin: 0 auto;
-        
+        margin: auto;
+        justify-content: center;
     }
 
     .aboutmeimage {
-        margin-right: 60px; /* Lägg till mellanrum mellan bild och text */
+        margin-right: 50px; /* Lägg till mellanrum mellan bild och text */
     }
     .aboutmeimage img {
-        width: 270px;
-        height: 450px;
+        width: 250px;
+        height:auto;
     }
     .aboutme {
-        text-align: left; /* Säkerställ att texten justeras åt vänster */
+        text-align: center; /* Säkerställ att texten justeras åt vänster */
+        margin: auto;
+        flex-direction: column;
         padding-bottom: 50px;
          min-width: 600px;
          
@@ -358,10 +406,15 @@ footer a:hover {
     #project-carousel{
         display: flex;
         flex-direction: column;
-        max-width: 200px;
-        margin-left: 20px;
+        justify-content: center;
+        width: 70%;
+        margin: auto;
         padding-top: 50px;
-        
+        margin-bottom: 50px;
+    }
+    #project-carousel h1{
+      text-align: center;
+      font-size: 3rem;
     }
     .carousel-cards{
         gap: 60px;
@@ -371,11 +424,13 @@ footer a:hover {
         padding: 10px 20px;
         border: 0 10px;
         border-radius: 10px;
+        width: 100%;
     }
     .project-cards img{
-        width: 400px;
-        height: 200px;
+        width: 100%;
+        height: auto;
         border-radius: 10px;
+        filter: brightness(80%); /* 100% är original, 50% gör bilden mörkare */
     }
     
     .project-button{
@@ -383,8 +438,10 @@ footer a:hover {
         border: none;
         border-radius: 10px;
         width: 150px;
-    
     }
+    .carousel-btn {
+        font-size: 50px;
+      }
 }
 @media screen and (min-width: 500px) and (max-width: 768px){
     .courses-grid .course-card {
@@ -458,15 +515,12 @@ footer a:hover {
     }
 }
 
-@media screen and (min-width: 400px){
-    #project-carousel{
-       
-        max-width: 400px;
-        margin-left: 20px;
+ @media screen and (min-width: 400px){
+    #contact{
+        padding-top: 40px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-}   .carousel-cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 60px;
-}
+ }

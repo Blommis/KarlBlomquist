@@ -34,13 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Education Info
     const educationContent = `
-        <p><strong>2023 - 2025</strong> | Bachelor's Degree in Digital Marketing from Sälj & Marknadshögskolan Stockholm.</p>
-        <p><strong>Jan - July 2025</strong> | Currently pursuing a Fullstack Developer Certificate at Code Institute Dublin (On distance).</p>
+        <p><strong>2016 - 2018</strong> | High School Diploma in Economics.</p>
+        <p><strong>2023 - 2025</strong> | Bachelor's Degree in Digital marketing from Sälj & Marknadshögskolan Stockholm.</p>
+        <p><strong>Jan - July 2025</strong> | Currently pursuing a Fullstack Developer diploma at Code Institute Dublin (On distance).</p>
     `;
 
     // Experience Info
     const experienceContent = `
-        <p><strong>Autumn 2023</strong> | In autumn 2023, I took my first Erasmus internship abroad in Copenhagen, working at a marketing agency 
+        <p><strong>Autumn 2023</strong> | I took my first Erasmus internship abroad in Copenhagen, working at a marketing agency 
         focused on influencer marketing. During this time, I gained valuable experience in international marketing and cultural differences.
          My main task was to establish the Danish platform in the Swedish market, managing the process independently. This internship improved my 
          adaptability, teamwork skills, and ability to communicate in multiple languages.
@@ -143,3 +144,50 @@ document.addEventListener("DOMContentLoaded", function () {
     coursesInfo.innerHTML = ""; // Ensure the grid is empty initially
 });
 
+
+const track = document.querySelector('.carousel-track');
+let cards = Array.from(document.querySelectorAll('.project-cards'));
+let currentIndex = 1;
+
+// Klona första och sista
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cards.length - 1].cloneNode(true);
+
+track.appendChild(firstClone);
+track.insertBefore(lastClone, track.firstChild);
+
+// Uppdatera kortlistan efter kloning
+cards = Array.from(document.querySelectorAll('.project-cards'));
+
+// Ställ in första synliga kortet (index 1, eftersom vi har en klon först)
+track.style.transform = `translateX(-${100 * currentIndex}%)`;
+
+function scrollCarousel(direction) {
+  if (track.classList.contains('shifting')) return;
+
+  currentIndex += direction;
+  track.classList.add('shifting');
+  track.style.transition = 'transform 0.5s ease';
+  track.style.transform = `translateX(-${100 * currentIndex}%)`;
+}
+
+// Återställ när vi når klonade kortet
+track.addEventListener('transitionend', () => {
+  track.classList.remove('shifting');
+
+  if (currentIndex === 0) {
+    // Gå till sista riktiga kortet
+    currentIndex = cards.length - 2;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${100 * currentIndex}%)`;
+  } else if (currentIndex === cards.length - 1) {
+    // Gå till första riktiga kortet
+    currentIndex = 1;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${100 * currentIndex}%)`;
+  }
+});
+
+
+
+  
