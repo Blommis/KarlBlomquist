@@ -303,7 +303,7 @@ h1, h2, h3{
   .project-cards img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    
     filter: brightness(80%); /* 100% är original, 50% gör bilden mörkare */
   }
   .project-button{
@@ -469,41 +469,44 @@ h1, h2, h3{
     #experience-btn p{
         margin-left: 610px;
     }
-    #project-carousel{
+    #project-carousel {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;       /* Lägg till för att centrera innehållet horisontellt */
         width: 70%;
-        margin: auto;
-        padding-top: 50px;
-        margin-bottom: 50px;
-        
+        height: auto;              /* Behåll detta för att inte låsa höjden */
+        margin: 0 auto 60px auto;  /* Kortare syntax för centrering + bottom-marginal */
+        padding: 20px 0 0 0;       /* Endast top-padding om du vill ha lite luft ovanför */
+        overflow: hidden;          /* Döljer överflöd om något sticker ut */
     }
+    
     #project-carousel h1{
       text-align: center;
       font-size: 3rem;
     }
     .carousel-cards{
-        gap: 60px;
+        gap: 30px;
     }
     .project-cards{
-        background:linear-gradient(135deg, #10eca3, #038ffb77);
         padding: 10px 20px;
         border: 0 10px;
         border-radius: 10px;
-        width: 50%;
-        height: 50%;
+        
     }
-    .project-cards img{
-        width: 50%;
+    .project-cards img {
+        width: 60%;
         height: auto;
-        border-radius: 10px;
-        justify-content: center;
-        margin: auto;
-        text-align: center;
-        align-items: center;
-        filter: brightness(80%); /* 100% är original, 50% gör bilden mörkare */
+        display: block;
+        margin: 0 auto;
+        padding: 0;                     /* ↓ Ändra från 30px till 0 för att ta bort onödigt utrymme */
+        border: none;
+        line-height: 0;
+        background-color: transparent;
+        filter: brightness(80%);
     }
+    
+    
     
     .project-button{
         padding: 10px;
@@ -511,9 +514,8 @@ h1, h2, h3{
         border-radius: 10px;
         width: 150px;
     }
-    .carousel-btn {
-        font-size: 50px;
-      }
+    
+      
 }
 @media screen and (min-width: 500px) and (max-width: 768px){
     .courses-grid .course-card {
