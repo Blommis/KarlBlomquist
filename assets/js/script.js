@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Web Developer Courses
     const webDeveloperCourses = [
         "HTML", "CSS", "Bootstrap","JavaScript", "Jest", 
-        "jQuery", "API", "Python (Soon)", "Django (Soon)", 
-        "React.js","Database Management", "Github", "Vs Code", "README"
+        "jQuery", "API", "Python", "Django", 
+        "React.js", "SQL", "Database Management", "Github", "Vs Code", "README"
     ];
 
     // Function to render course cards
@@ -189,5 +189,18 @@ track.addEventListener('transitionend', () => {
 });
 
 
+// Animation to tools section 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const items = entry.target.querySelectorAll('h4');
+        items.forEach(item => item.classList.add('animate'));
+        observer.unobserve(entry.target); // Bara en gång
+      }
+    });
+  }, { threshold: 0.2 });
 
-  
+  const toolsSection = document.querySelector('.tools-websites');
+  if (toolsSection) {
+    observer.observe(toolsSection);
+  }

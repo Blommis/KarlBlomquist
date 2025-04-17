@@ -16,14 +16,8 @@ body {
 h1, h2, h3{
     font-family: var(--secondary-font);
 }
-#home {
-    background:linear-gradient(135deg, #10eca3, #038ffb77);
-    
-}
 
-#home .col-lg-5 img {
-    margin-top: 50px; /* Flyttar ner bilden */
-}
+
 
 
 #navbar {
@@ -39,7 +33,36 @@ h1, h2, h3{
     color: white;  /* Change to your preferred hover color */
 }
 
-
+#home {
+    background:linear-gradient(135deg, #10eca3, #038ffb77);
+    
+}
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #home .col-lg-5,
+  #home .col-lg-7 {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  /* Delay för lite extra feeling */
+  #home .col-lg-5 {
+    animation-delay: 0.2s;
+  }
+  
+  #home .col-lg-7 {
+    animation-delay: 0.4s;
+  }
+  
 
 
 .typed-text-output {
@@ -169,7 +192,7 @@ h1, h2, h3{
 }
 
 #additional-info p {
-    max-width: 100%; /* Limits the width for better readability */
+     /* Limits the width for better readability */
     margin: 10px auto; /* Centers the paragraph within its container */
     text-align: left; /* Centers the text within the paragraph */
 }
@@ -315,7 +338,50 @@ h1, h2, h3{
     right: 10px;
   }
   
+/*Tools section*/
+.tools-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+}
+.tools-header{
+    max-width: 270px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+
+.tools-websites h4 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(146, 145, 145);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
   
+  .tools-websites h4.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Delay varje element för sekventiell effekt */
+  .tools-websites h4:nth-child(1) { transition-delay: 0.1s; }
+  .tools-websites h4:nth-child(2) { transition-delay: 0.2s; }
+  .tools-websites h4:nth-child(3) { transition-delay: 0.3s; }
+  .tools-websites h4:nth-child(4) { transition-delay: 0.4s; }
+  .tools-websites h4:nth-child(5) { transition-delay: 0.5s; }
+  .tools-websites h4:nth-child(6) { transition-delay: 0.6s; }
+  .tools-websites h4:nth-child(7) { transition-delay: 0.7s; }
+  .tools-websites h4:nth-child(8) { transition-delay: 0.8s; }
+  .tools-websites h4:nth-child(9) { transition-delay: 0.9s; }
+  .tools-websites h4:nth-child(10) { transition-delay: 1s; }
+  
+
+  /*Footer*/
 #contact{
     text-align: center;
 }
@@ -411,6 +477,7 @@ h1, h2, h3{
         margin: auto;
         padding-top: 50px;
         margin-bottom: 50px;
+        
     }
     #project-carousel h1{
       text-align: center;
@@ -424,12 +491,17 @@ h1, h2, h3{
         padding: 10px 20px;
         border: 0 10px;
         border-radius: 10px;
-        width: 100%;
+        width: 50%;
+        height: 50%;
     }
     .project-cards img{
-        width: 100%;
+        width: 50%;
         height: auto;
         border-radius: 10px;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        align-items: center;
         filter: brightness(80%); /* 100% är original, 50% gör bilden mörkare */
     }
     
@@ -482,9 +554,9 @@ h1, h2, h3{
             overflow: hidden; /* Prevent text overflow */
     }
     .aboutme {
-        max-width: 400px;
-        margin-left: 5px;
-        text-align: left;
+       max-width: fit-content;
+        margin-left: 10px;
+        
     }
     
     
@@ -509,13 +581,13 @@ h1, h2, h3{
 }
 @media screen and (max-width: 350px){
     .aboutme {
-        max-width: 230px;
+        max-width: fit-content;
         margin-left: 10px;
         text-align: left;
     }
 }
 
- @media screen and (min-width: 400px){
+ @media screen and (min-width: 530px){
     #contact{
         padding-top: 40px;
         padding-bottom: 10px;
@@ -523,4 +595,29 @@ h1, h2, h3{
         flex-direction: row;
         justify-content: space-evenly;
     }
+    .tools-websites {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        justify-items: center;
+        margin: auto;
+        text-align: center;
+      }
+      .tools-container{
+        padding-top: 60px;
+    }
+    .tools-websites h4{
+        text-align: left;
+      
+    }
+    .tools-header h1{
+        font-size: 3rem;
+    }
+   
+ }
+ @media screen and (min-width: 400px){
+    .tools-header{
+        max-width: 500px;
+       }
+       
  }
