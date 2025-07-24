@@ -41,17 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Experience Info
     const experienceContent = `
-        <p><strong>Autumn 2023</strong> | I took my first Erasmus internship abroad in Copenhagen, working at a marketing agency 
-        focused on influencer marketing. During this time, I gained valuable experience in international marketing and cultural differences.
-         My main task was to establish the Danish platform in the Swedish market, managing the process independently. This internship improved my 
-         adaptability, teamwork skills, and ability to communicate in multiple languages.
+        <p><strong>Autumn 2023</strong> | In the fall of 2023, I completed my first internship abroad at a marketing agency in Copenhagen. I was responsible for leading the launch of their platform on the Swedish market – a project where I managed strategy, content creation, and execution independently. I created ad campaigns, managed social media, and worked actively on building brand awareness in a new market.
+
+The internship gave me valuable insight into how marketing works in an international context and sharpened my ability to adapt to new environments, collaborate across cultures, and communicate in both Swedish and English.
           </p>
 
         <p><strong>Autumn 2024</strong> | During my second internship at the marketing department of the recruitment company Procruitment, 
-        I have combined technical skills with creativity to produce content that strengthens the brand. I developed a career page and an intranet for
-         consultants, utilizing HTML, CSS, and JavaScript with a strong focus on user-friendliness.
-Additionally, I have worked on SEO, copywriting, and content marketing, as well as managing their social 
-media to effectively reach the target audience. By leveraging tools like Keyword Planner and Google Analytics, I have analyzed data to identify areas for improvement in Procruitment's marketing efforts and implemented strategies to optimize results.</p>
+         I worked both strategically and hands-on with digital marketing. I planned and managed campaigns in Google Ads and Meta Ads, optimizing towards key metrics like ROAS, CTR and CPA. I also worked with product feed setup, retargeting, and tailored campaigns based on seasonality and audience insights.
+
+In addition to ad campaigns, I created content for newsletters and social media, and worked actively with SEO using tools like SEMrush and Ahrefs. Through platforms like Google Analytics and HubSpot, I followed up on campaign performance and adapted our strategies to improve results.
+<br><br>
+A big part of my work involved aligning content with every step of the customer journey – from first interaction to conversion and return visits. I structured content based on user needs and buying behavior, adjusted tone and messaging for different stages, and produced visual assets in Canva and Adobe to capture attention, drive engagement and support conversion.
+
+I also built a career page and internal consultant portal from scratch – both in the CMS tool SiteModify and using HTML, CSS and JavaScript. It was a project where I combined technical skills with a strong focus on UX, accessibility and clear communication. To me, it’s essential that every part of a campaign or website fits together – visually, technically and strategically – to create a coherent and conversion-driven experience.</p>
     `;
 
     // Function to handle active state

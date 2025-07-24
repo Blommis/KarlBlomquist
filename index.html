@@ -52,7 +52,7 @@
                 <h1 class="typed-text-output d-inline fw-light text-white" ></h1>
                 
                 <div class="contact-info d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start pt-5">
-                    <a href="assets/pdf/Karl-Blomquist-CV.pdf" download target="_blank" class="btn btn-outline-light me-lg-4 mb-3 mb-lg-0">Download CV</a>
+                    <a href="assets/pdf/CV-KB.pdf" download target="_blank" class="btn btn-outline-light me-lg-4 mb-3 mb-lg-0">Download CV</a>
                     
                     <a href="mailto:blomquist799@gmail.com" class="text-white me-lg-4 mb-3 mb-lg-0 text-center d-flex flex-column align-items-center">
                         <i class="fas fa-envelope fs-4 mb-2"></i> 
@@ -79,7 +79,7 @@
             <div class="fun-facts">
                 <h3>Fun Facts About Me</h3>
                 <ul>
-                    <li><strong>25 years old</strong> from Karlstad, Sweden.</li>
+                    <li><strong>26 years old</strong> from Karlstad, Sweden.</li>
                     <li>A passionate <strong>Manchester United supporter.</strong></li>
                     <li>Loves <strong>coffee</strong></li>
                     <li>Have never seen <strong>The Godfather</strong></li>
@@ -91,11 +91,26 @@
         </div>
         <div class="aboutme">
             <h2 id="experiences">Bachelor in marketing & Fullstack developer student</h2>
-            <p>To challenge myself and learn new things has always been important to me,
-                 and I've always strived to step outside my comfort zone. I believe in creating a balance 
-                 between work and leisure, and spending time with loved ones is important to me.
-                  You'll also find me at the gym and deeply invested in Manchester United matches – my great passion outside of work!
-                </p>
+            <p>I’m 26, born and raiser from Karlstad, and currently wrapping up my fullstack development studies. Before that, 
+              I earned a degree in digital marketing, and I’ve done internships in both Stockholm and Copenhagen.
+              Outside of work, I value balance. I enjoy working out, catching up with friends and family, and watching 
+              (and suffering with) Manchester United. <br><br>I’m the kind of person who’s curious, thrives when there’s a 
+              mix of structure and creativity, and who always tries to bring good energy.
+      
+              To challenge myself and learn new things has always been important to me,
+                 and I've always strived to step outside my comfort zone. 
+            </p>
+            <h3> What do I love with marketing and web development?</h3>
+            <p>
+              What I love about marketing is the creative puzzle – understanding people, shaping messages, 
+              and creating content that actually connects. Fullstack development, on the other hand, gives 
+              me the satisfaction of building something from the ground up and making sure every piece fits – 
+              from logic and data to design and flow.
+              <br><br>
+              Combining the two has helped me see the full picture. I’m not just thinking about how something 
+              looks or functions, but how it supports the user at every step of their journey. Whether it’s a campaign, 
+              a landing page, or a full product – I like to understand the why behind the what.
+            </p>
 
             <div class="info-buttons">
                 <button id="education-btn">Education </button>
@@ -139,71 +154,118 @@
           <h4><i class="fa-brands fa-meta" style="color: #9d07dd;"></i> Meta</h4>
           <h4><i class="fa-solid fa-a" style="color: #63E6BE;"></i> Ahrefs</h4>
           <h4><i class="fa-solid fa-sitemap" style="color: #09b7f1;"></i> SiteModify</h4>
+          <h4><i class="fa-solid fa-face-smile" style="color: #a5e1ed;"></i> Balsamiq</h4>
+          <h4><i class="fa-solid fa-house" style="color: #8f0dc6;"></i> Heroku</h4>
+          <h4><i class="fa-solid fa-hands-praying" style="color: #ebbe09;"></i> REST APIS</h4>
         </div>
       </div>
 
     </section>
     
+ <!-- Github Section -->
+<section id="github" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Explore my 20+ repositories on GitHub</h2>
+    <p class="mb-4">Curious about how I built my projects? Visit my GitHub profile to explore repositories, see how I've structured my code and follow along on my journey as a web developer.</p>
+    <a href="https://github.com/Blommis?tab=repositories" target="_blank" class="btn btn-dark btn-lg">
+      <i class="fab fa-github me-2"></i>Visit my GitHub
+    </a>
+  </div>
+</section>
+
     
-  <!-- Project section -->
+ <!-- Project section -->
 <section id="project-carousel">
-    <h1>My school projects</h1>
-  
-    <div class="carousel-wrapper">
-      <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
-  
-      <div class="carousel-track">
-        <!-- Card 1 -->
-        <div class="project-cards">
-          <img src="assets/images/memory-game-mockup (2).png">
+  <h1>My school projects</h1>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+    <div class="carousel-track">
+
+      <!-- Card 0 -->
+      <div class="project-cards">
+        <div class="project-image">
+          <img src="assets/images/wellness-site.webp" alt="Wellness site">
+        </div>
+        <div class="project-content">
+          <h2>Wellness</h2>
+          <p><strong>Built with: Frontend: JavaScript, HTML & CSS · Backend: Python, Django, Postgres & REST APIs</strong></p>
+          <p><p>Craving supplement or just a great breakfast? This fullstack site serves up supplements and recipes in one tasty package.</p></p>
+          <button class="project-button" onclick="window.open('https://wellness-website-7aba5e2a6dc3.herokuapp.com/', '_blank')">Visit website</button>
+        </div>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="project-cards">
+        <div class="project-image">
+          <img src="assets/images/memory-game-mockup (2).png" alt="Memory Game">
+        </div>
+        <div class="project-content">
           <h2>Memory Game</h2>
           <p><strong>Built with JavaScript, HTML and CSS</strong></p>
-          <p>Challenge your memory in this simple and fun game</p>
+          <p>Challenge your memory in this simple and fun game.</p>
           <button class="project-button" onclick="window.open('https://blommis.github.io/memory-game/', '_blank')">Visit website</button>
         </div>
-  
-        <!-- Card 2 -->
-        <div class="project-cards" >
-          <img src="assets/images/protein-power-mockup.png">
+      </div>
+
+      <!-- Card 2 -->
+      <div class="project-cards">
+        <div class="project-image">
+          <img src="assets/images/protein-power-mockup.png" alt="Protein Power">
+        </div>
+        <div class="project-content">
           <h2>Supplements and clothes store</h2>
           <p><strong>Built with JavaScript, HTML and CSS</strong></p>
-          <p>Dive into my very first ever website – a concept store for supplements and gym wear. Just a heads-up: no real orders will go through!
-          </p>
-          <button class="project-button" onclick="window.open('https://blommis.github.io/proteinpower/startsida.html','blank')">Visit website</button> 
+          <p>Dive into my very first ever website – a concept store for supplements and gym wear. Just a heads-up: no real orders will go through!</p>
+          <button class="project-button" onclick="window.open('https://blommis.github.io/proteinpower/startsida.html', '_blank')">Visit website</button>
         </div>
-  
-        <!-- Card 3 -->
-        <div class="project-cards">
-          <img src="assets/images/get-fit-mockup.png">
+      </div>
+
+      <!-- Card 3 -->
+      <div class="project-cards">
+        <div class="project-image">
+          <img src="assets/images/get-fit-mockup.png" alt="Get Fit Website">
+        </div>
+        <div class="project-content">
           <h2>Gym website</h2>
           <p><strong>Built with HTML and CSS</strong></p>
-          <p>Take a look at what a gym website could look like</p>
-          <button class="project-button" onclick="window.open('https://blommis.github.io/get-fit/','blank')">Visit website</button>
+          <p>Take a look at what a gym website could look like.</p>
+          <button class="project-button" onclick="window.open('https://blommis.github.io/get-fit/', '_blank')">Visit website</button>
         </div>
-  
-        <!-- Card 4 -->
-        <div class="project-cards">
-          <img src="assets/images/adhigher-mockup.png">
+      </div>
+
+      <!-- Card 4 -->
+      <div class="project-cards">
+        <div class="project-image">
+          <img src="assets/images/adhigher-mockup.png" alt="Adhigher">
+        </div>
+        <div class="project-content">
           <h2>Marketing agency</h2>
-          <p>Built in Wix – explore Adhigher, a fictional marketing agency with focus on SEO and Google ads.  </p>
-          <button class="project-button" onclick="window.open('https://blomquist799.wixsite.com/adhigher','blank')">Visit website</button>
+          <p>Built in Wix – explore Adhigher, a fictional marketing agency with focus on SEO and Google Ads.</p>
+          <button class="project-button" onclick="window.open('https://blomquist799.wixsite.com/adhigher', '_blank')">Visit website</button>
         </div>
-  
-        <!-- Card 5 -->
-        <div class="project-cards">
-          <img src="assets/images/lov-running-mockup.png">
+      </div>
+
+      <!-- Card 5 -->
+      <div class="project-cards">
+        <div class="project-image">
+          <img src="assets/images/lov-running-mockup.png" alt="Running Club">
+        </div>
+        <div class="project-content">
           <h2>Running club website</h2>
           <p><strong>Built with HTML and CSS</strong></p>
           <p>Lace up and get moving – check out this running club website designed to motivate and connect runners.</p>
-          <button class="project-button" onclick="window.open('https://blommis.github.io/love-running/','blank')">Visit website</button>
+          <button class="project-button" onclick="window.open('https://blommis.github.io/love-running/', '_blank')">Visit website</button>
         </div>
       </div>
-  
-      <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+
     </div>
-    
-    
-  </section>
+
+    <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+  </div>
+</section>
+
   
 
     
