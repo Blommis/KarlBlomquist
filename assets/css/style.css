@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
 
 /*CSS Variables*/
 :root{
@@ -35,8 +36,9 @@ h1, h2, h3{
 
 #home {
     background:linear-gradient(135deg, #10eca3, #038ffb77);
-    
+    margin-bottom: 0 !important;
 }
+
 @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -63,6 +65,61 @@ h1, h2, h3{
     animation-delay: 0.4s;
   }
   
+.holiday-wishing {
+  background-color: #990101;
+  color: white;
+  text-align: center;
+
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.holiday-wishing p {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.holiday-wishing h2 {
+  font-size: 3.5rem;
+  margin: 0;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+
+}
+.holiday-wishing p,
+.holiday-wishing h2 {
+  font-family: "Carattere", cursive;
+}
+
+/*Faller ner snö i bakgrunden*/
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* så man kan klicka igenom */
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
 
 
 .typed-text-output {

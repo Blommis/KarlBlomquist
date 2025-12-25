@@ -206,3 +206,21 @@ const observer = new IntersectionObserver(entries => {
   if (toolsSection) {
     observer.observe(toolsSection);
   }
+
+
+// make sure snoflakes in function falling down in the background
+const snowContainer = document.querySelector(".snow");
+const snowflakeCount = 40; // justera mängden snö
+
+for (let i = 0; i < snowflakeCount; i++) {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.innerHTML = "❄";
+
+  snowflake.style.left = Math.random() * 100 + "vw";
+  snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+  snowflake.style.fontSize = Math.random() * 10 + 8 + "px";
+  snowflake.style.opacity = Math.random();
+
+  snowContainer.appendChild(snowflake);
+}
